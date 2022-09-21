@@ -13,7 +13,7 @@ COPY entrypoint.sh /entrypoint.sh
 RUN echo "http://mirrors.aliyun.com/alpine/v3.16/main" > /etc/apk/repositories \
     && echo "http://mirrors.aliyun.com/alpine/v3.16/community" >> /etc/apk/repositories \
     && apk update upgrade \
-    && apk add --no-cache netcat-openbsd curl bash openssh openrc \
+    && apk add --no-cache netcat-openbsd curl bash openssh openrc python3 py3-pip \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
     && rc-update add sshd \
