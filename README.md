@@ -4,6 +4,7 @@ sshd service support, you can use for ssh agent to access docker network
 
 ```bash
 $ docker run -d -it --name agent -p 2200:22 -e pwd=1024  fengjx/alpine-agent
+$ ssh -p 2200 root@localhost
 root@localhost's password: # 1024
 Welcome to Alpine!
 
