@@ -1,6 +1,6 @@
 # Dockerfile for apollo quick start
 # Build with:
-# docker build -t fengjx/alpine-agent:[version] .
+# docker buildx build --platform linux/amd64,linux/arm64 -t fengjx/alpine-agent:[version] .
 # Run with:
 
 FROM alpine:3.16
